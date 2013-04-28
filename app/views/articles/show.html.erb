@@ -15,7 +15,17 @@
 <%= link_to 'Delete', @article, :confirm => 'Are you sure?', :method => :delete %>
 
 <%= render :partial => @article.comments %>
+
+
+
 <h2>Comments</h2>
+
+<% for comment in @article.comments %>
+      <%= comment.body %>
+      <br/>
+      <%= comment.name %>[by <%= comment.email %>]
+      <hr />
+<% end %>
 
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <div class="field">
@@ -32,3 +42,4 @@
   </div>
   <p><%= f.submit %></p>
 <% end %>
+  

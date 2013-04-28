@@ -1,0 +1,9 @@
+<%= render :partial => 'comments/form' %>
+
+<ul class="comments">
+  <% if @articles.comments.empty? %>
+    <li>none yet</li>
+  <% else %>
+    <%= render :partial => 'comments/comment' %>
+  <% end %>
+</ul>
