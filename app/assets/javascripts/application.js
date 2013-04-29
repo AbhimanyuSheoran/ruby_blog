@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//$(".savebutton").click(function() {
+//    $('.form').submit(function() {
+//    var valuesToSubmit = $(this).serialize();
+//    $.ajax({
+//        url: $(this).attr('action'),
+//        data: valuesToSubmit,
+//        dataType: "JSON" 
+//    }).success(function(json){
+//        
+//    });
+//    return false; 
+//});
+//         });
+//$("#add_comment").html("<%= escape_javascript(render(:partial => 'comment', :locals => {:comment => @comment})).html_safe %>");
+$('.delete_post').bind('ajax:success', function() {
+    $(this).closest('tr').fadeOut();
+});

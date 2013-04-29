@@ -1,0 +1,7 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "create.js" %>
+$('body').html("<h1><%= escape_javaScript(@article.title) %></h1>").append("<%= escape_javaScript(@article.body) %>");
